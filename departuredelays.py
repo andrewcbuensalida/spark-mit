@@ -32,3 +32,12 @@ spark.sql(
           FROM delays_table
           ORDER BY origin, delay DESC"""
 ).show(10)
+
+# this is an alternative to sql above
+from pyspark.sql.functions import col, desc
+
+(
+    df.select("distance", "origin", "destination")
+    .where(col("distance") > 1000)
+    .orderBy(desc("distance"))
+).show(10)
