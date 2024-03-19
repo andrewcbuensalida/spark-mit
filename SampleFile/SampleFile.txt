@@ -1,0 +1,4 @@
+This is a sample file.
+Spark is a powerful tool.
+It is an Open Source software provided by Apache.
+We are going to have Spark read this file and count how many times "Spark" is written. 
